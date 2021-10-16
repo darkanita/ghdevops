@@ -21,3 +21,5 @@ Correr Docker
 ``` 
 docker run -p 3000:3000 -d --name helloworld helloworld:v0.0
 ```
+
+Probando politicas
