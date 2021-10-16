@@ -6,6 +6,7 @@ var logger = require("morgan");
 
 var indexRouter = require('./routes/index');
 var healthRouter = require('./routes/healthRouter');
+var dividirRouter = require('./routes/dividir');
 var restaRouter = require("./routes/resta");
 var sumaRouter = require("./routes/suma");
 
@@ -21,9 +22,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
+
 app.use("/", indexRouter);
 app.use("/healthCheck", healthRouter);
 app.use("/suma", sumaRouter);
+app.use('/dividir', dividirRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
