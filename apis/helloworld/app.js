@@ -10,6 +10,7 @@ var multRouter = require("./routes/multiplicacion");
 var dividirRouter = require('./routes/dividir');
 var restaRouter = require("./routes/resta");
 var sumaRouter = require("./routes/suma");
+var suma2Router = require("./routes/suma2");
 
 
 
@@ -30,6 +31,7 @@ app.use('/', indexRouter);
 app.use('/healthCheck', healthRouter);
 app.use("/multiplicacion", multRouter);
 app.use("/suma", sumaRouter);
+app.use("/suma2", suma2Router);
 app.use('/dividir', dividirRouter);
 
 
