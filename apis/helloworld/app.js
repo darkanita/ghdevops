@@ -11,7 +11,9 @@ var dividirRouter = require("./routes/dividir");
 var restaRouter = require("./routes/resta");
 var restaRouter2 = require("./routes/resta2");
 var sumaRouter = require("./routes/suma");
+var suma2Router = require("./routes/suma2");
 var multiplicarRouter = require("./routes/multiplicacion1");
+
 
 var app = express();
 
@@ -30,6 +32,7 @@ app.use("/healthCheck", healthRouter);
 app.use("/multiplicacion", multRouter);
 app.use("/multiplicacion1", multiplicarRouter);
 app.use("/suma", sumaRouter);
+app.use("/suma2", suma2Router);
 app.use('/dividir', dividirRouter);
 app.use('/resta', restaRouter);
 app.use('/resta2', restaRouter2);
