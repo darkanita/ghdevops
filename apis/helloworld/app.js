@@ -4,14 +4,13 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
-var indexRouter = require('./routes/index');
-var healthRouter = require('./routes/healthRouter');
+var indexRouter = require("./routes/index");
+var healthRouter = require("./routes/healthRouter");
 var multRouter = require("./routes/multiplicacion");
-var dividirRouter = require('./routes/dividir');
+var dividirRouter = require("./routes/dividir");
 var restaRouter = require("./routes/resta");
 var sumaRouter = require("./routes/suma");
-
-
+var multiplicarRouter = require("./routes/multiplicacion1");
 
 var app = express();
 
@@ -25,14 +24,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-
-app.use('/', indexRouter);
-app.use('/healthCheck', healthRouter);
+app.use("/", indexRouter);
+app.use("/healthCheck", healthRouter);
 app.use("/multiplicacion", multRouter);
+app.use("/multiplicacion1", multiplicarRouter);
 app.use("/suma", sumaRouter);
-app.use('/dividir', dividirRouter);
-
-
+app.use("/dividir", dividirRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
