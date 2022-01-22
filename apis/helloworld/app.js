@@ -10,7 +10,7 @@ var multRouter = require("./routes/multiplicacion");
 var dividirRouter = require("./routes/dividir");
 var restaRouter = require("./routes/resta");
 var restaRouter2 = require("./routes/resta2");
-var sumaRouter = require("./routes/suma");
+var sumaRouter = require(".apis/helloworld/routes/suma");
 var suma2Router = require("./routes/suma2");
 var multiplicarRouter = require("./routes/multiplicacion1");
 
